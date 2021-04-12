@@ -1,2 +1,2 @@
-location = "northeurope"
-prefix = "ietest2"
+location = "westeurope"
+prefix = "test1lucianvisma"

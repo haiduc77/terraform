@@ -19,8 +19,8 @@ resource "azurerm_app_service_plan" "main" {
 
 
   sku {
-    tier = "Basic"
-    size = "B1"
+    tier = "Standard"
+    size = "S1"
   }
 }
 
@@ -51,11 +51,11 @@ depends_on = [azurerm_resource_group.main]
 }
 #Using ZRS replication type for HA
 resource "azurerm_storage_account" "sg" {
-  name                     = "ietest2vismastorage"
+  name                     = "test1lucianvismastorage"
   resource_group_name      = azurerm_resource_group.main.name
   location                 = var.location
   account_tier             = "Standard"
-  account_replication_type = "LRS"
+  account_replication_type = "ZRS"
   depends_on = [azurerm_resource_group.main]
 }
 
