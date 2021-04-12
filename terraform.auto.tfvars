@@ -1,2 +1,2 @@
-location = "westeurope"
+location = "northeurope"
 prefix = "ietest1"
