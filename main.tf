@@ -51,11 +51,10 @@ depends_on = [azurerm_resource_group.main]
 }
 #Using ZRS replication type for HA
 resource "azurerm_storage_account" "sg" {
-  name                     = "testlucianvismastorage"
+  name                     = "${var.prefix}vismastorage"
   resource_group_name      = azurerm_resource_group.main.name
   location                 = var.location
-  account_tier             = "Standard"
-  account_replication_type = "ZRS"
+  account_tier             = "Free"
   depends_on = [azurerm_resource_group.main]
 }
 

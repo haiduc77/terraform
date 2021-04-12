@@ -1,2 +1,2 @@
 location = "northeurope"
-prefix = "ietest1"
+prefix = "ietest2"
